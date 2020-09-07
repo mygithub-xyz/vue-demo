@@ -67,7 +67,7 @@
 
         width: 100%;
 
-        height: 600px;
+        height: 550px;
 
         background:url(../components/img/manage-bg.jpg)
 

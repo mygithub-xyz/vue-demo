@@ -8,8 +8,11 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "echarts": "^4.9.0",
     "element-ui": "^2.13.2",
     "jsonp": "^0.2.1",
+    "v-charts": "^1.19.0",
+    "v-echarts": "^1.0.2",
     "vue": "^2.6.11",
     "vue-axios": "^2.1.5",
     "vue-jsonp": "^0.1.8",

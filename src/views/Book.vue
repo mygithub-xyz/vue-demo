@@ -1,13 +1,13 @@
 
 <template>
-    <div class="book" >
+    <div class="book">
             <table style="width: 90%">
                 <tr>
                     <th align="left">
-                        <el-button type="focus" @click="addUser">新增</el-button>
-                        <el-button type="info" @click="deleteUsers">批量删除</el-button>
-                        <el-button type="hover" @click="loadData">刷新</el-button>
-                        <el-button type="info" @click="exports">导出</el-button>
+                        <el-button type="focus" @click="addUser()">新增</el-button>
+                        <el-button type="info" @click="deleteUsers()">批量删除</el-button>
+                        <el-button type="hover" @click="currentPage=1,loadData()">刷新</el-button>
+                        <el-button type="info" @click="exports()">导出</el-button>
                     </th>
                     <th align="right">
                         <el-form :inline="true" :model="searchPeople" @keyup.enter.native="reloadList()">
@@ -102,7 +102,7 @@
                     <el-input type="text" v-model="people.countryid" auto-complete="off" placeholder="密码"></el-input>
                 </el-form-item>
                 <el-form-item prop="createtime">
-                    <el-date-picker v-model="people.createtime" auto-complete="off" placeholder="选择日期" format="yyyy年MM月dd日 HH时mm分ss秒" value-format="yyyy-MM-dd HH:mm:ss">
+                    <el-date-picker type="datetime" v-model="people.createtime" auto-complete="off" placeholder="选择日期" format="yyyy年MM月dd日 HH时mm分ss秒" value-format="yyyy-MM-dd HH:mm:ss">
                     </el-date-picker>
                 </el-form-item>
             </el-form>
@@ -360,6 +360,7 @@
 <style>
     body {
         background: #c5eefb;
+        height: auto;
     }
     .el-table .warning-row {
         background: #c6dd88;

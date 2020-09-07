@@ -3,8 +3,11 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home'
 import Book from "../views/Book";
 import About from "../views/About";
+import view from "../views/view";
 import index from "../views/index";
 import login from "../views/login";
+import echart from "../views/echart";
+import vchart from "../views/vchart";
 Vue.use(VueRouter)
 const routes = [
     {
@@ -34,6 +37,18 @@ const routes = [
 
           },
           {
+              path: '/echart',
+              name: 'echart',
+              component: echart
+
+          },
+          {
+              path: '/vchart',
+              name: 'vchart',
+              component: vchart
+
+          },
+          {
               path: '/home',
               name: 'Home',
               component: Home
@@ -43,6 +58,11 @@ const routes = [
               path: '/about',
               name: 'About',
               component: About
+          } ,
+          {
+              path: '/view',
+              name: 'view',
+              component: view
           }
       ]
   },
